@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-	int x;
+	int x = 0;
 	cin >> x;
 	int crutch = (x * x + x);
 	cout << crutch * (crutch - (x - 1)) + 1;    // x^4 + x^3 + x^2 + x + 1 =

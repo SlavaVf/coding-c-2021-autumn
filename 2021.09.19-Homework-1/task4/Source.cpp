@@ -2,8 +2,10 @@
 
 using namespace std;
 
-int main() {
-    int v, t, s = 109;
+int main(int argc, char* argv[]) {
+    int s = 109;
+    int v = 0;
+    int t = 0;
     cin >> v >> t;
     cout << (v * t % 109 + 109) % 109;
     return EXIT_SUCCESS;
