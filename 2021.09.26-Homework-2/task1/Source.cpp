@@ -104,6 +104,7 @@ int main(int argc, char* argv[]) {
 		switch (u) {
 		case 0:
 			cout << "бананов";
+			break;
 		case 1:
 			cout << "один банан";
 			break;
