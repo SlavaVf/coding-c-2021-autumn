@@ -6,7 +6,7 @@ int main(int argc, char* argv[]) {
 	int n = 0;
 	cin >> n;
 	if (n == 1) {
-			cout << "YES";
+		cout << "YES";
 		}
 	else if (n % 2 != 0) {
 		cout << "NO";
