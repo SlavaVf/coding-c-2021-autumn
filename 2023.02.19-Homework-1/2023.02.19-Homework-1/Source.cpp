@@ -5,35 +5,40 @@ struct Animal {
 	std::string type;
 	std::string name;
 	int age;
-	
+
 	Animal() {
 		this->type = "default";
 		this->name = "default";
-		this->age = 0; 
+		this->age = 0;
 	}
 	Animal(std::string type, std::string name, int age) {
 		this->type = type;
 		this->name = name;
 		this->age = age;
 	}
-	Animal(const Animal& lamina) {
-		this->type = lamina.type;
-		this->name = lamina.name;
-		this->age = lamina.age;
+	Animal(const Animal& animal) {
+		this->type = animal.type;
+		this->name = animal.name;
+		this->age = animal.age;
 	}
 	~Animal() {};
 };
 
-void printAnimal(Animal lamina) {
-	std::cout << "type: " << lamina.type << "\n" << "name: " <<
-	lamina.name<< "\n" << "age: " << lamina.age << std::endl;
+void printAnimal(Animal animal) {
+	std::cout << "type: " << animal.type << "\n" << "name: " <<
+		animal.name << "\n" << "age: " << animal.age << std::endl;
 }
 
-void elderAnimal(Animal& lamina) {
-	lamina.age += 1;
+void elderAnimal(Animal& animal) {
+	animal.age += 1;
 }
 
 int main(int argc, char* argv[]) {
-
+	Animal danimal;
+	printAnimal(danimal);
+	Animal animal("human", "slava", 19);
+	elderAnimal(animal);
+	Animal canimal(animal);
+	printAnimal(canimal);
 	return EXIT_SUCCESS;
 }
