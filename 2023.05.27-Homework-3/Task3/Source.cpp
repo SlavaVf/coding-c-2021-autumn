@@ -8,15 +8,21 @@ struct Shape {
 struct Rectangle : Shape {
 	double a;
 	double b;
+
 	Rectangle(double a, double b) : a(a), b(b) {};
-	double Area() const override{
+	~Rectangle() {};
+
+	double Area() const override {
 		return a * b;
 	}
 };
 
 struct Circle : Shape {
 	double r;
+
 	Circle(double r) : r(r) {};
+	~Circle() {};
+
 	double Area() const override {
 		return 3.1415 * r * r;
 	}
@@ -29,7 +35,10 @@ public:
 	double a;
 	double b;
 	double c;
+
 	Triangle(double a, double b, double c) : a(a), b(b), c(c), p((a + b + c) / 2.0) {};
+	~Triangle() {};
+
 	double Area() const override {
 		return sqrt(p * (p - a) * (p - b) * (p - c));
 	}
@@ -37,7 +46,10 @@ public:
 
 struct Square : Shape {
 	double a;
+
 	Square(double a) : a(a) {};
+	~Square() {};
+
 	double Area() const override {
 		return a * a;
 	}
